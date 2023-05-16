@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+	<title>HTML-фopмы</title> 
+	<meta charset='utf-8'>
+</head>
+<body>
+	<form action='form2.php' method='post'>
+        <!-- Различные поля -->
+		<input type="text" name="name"><br>
+		<input type="text" name="age"><br>
+		<input type="password" name="pass"><br>
+		<input type="hidden" name="hid" value="test">
+        <!-- Пример чекбоксов -->
+		<input type="checkbox" name="php">PHP<br>
+		<input type="checkbox" name="js">JS<br>
+		<input type="checkbox" name="python">Python<br>
+		<input type="checkbox" name="c#">C#<br>
+        <!-- Пример с выбором цвета (ставить галочки) -->
+        <input type="checkbox" name="red">Red<br>
+		<input type="checkbox" name="white">White<br>
+		<input type="checkbox" name="blue">Blue<br>
+        <!--Выпадающий список -->
+        <select name="period[]" multiple size="3">
+			<option>Сделайте свой выбор</option>
+			<option value="one">Месяц</option>
+			<option value="six">Полгода</option>
+			<option value="twelve">Год</option>
+			<option value="zero">Не помню</option>
+		</select>
+		<br>
+		<!-- Переключатели -->
+		<input type="radio" name="slide" value="1">1
+		<input type="radio" name="slide" value="2">2
+		<input type="radio" name="slide" value="3">3<br>
+
+		<input type='submit' vаluе='Отправить'>
+	</form>
+</body>
