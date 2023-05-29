@@ -4,6 +4,8 @@ session_start();
 $_SESSION['name'] = 'Andrew';
 require_once('form.php');
 
+echo $_SERVER['REQUEST_URI'] . "<br>";
+
 // Проверка внутри проверки
 //if (!empty($_POST)) { // Проверяем пустой или не пустой суперглобальный массив $_POST
 //    if (empty($_POST['name'])) { // Если не пустой, идем дальше по скрипту
