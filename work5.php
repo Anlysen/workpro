@@ -1,7 +1,7 @@
 <?php
 // Методы
 
-class Hi { 
+class Hi { // Обычный класс
     public static function Hello() { // Публичный метод
         return 'Hello anybody!';
     }
@@ -9,14 +9,16 @@ class Hi {
         return 'by!';
     }
 }
-$object = new Hi;
+$object = new Hi; // Обьект
 
 //echo $object->Hello() . "<br>";
 //echo $object->by() . "<br>";
 // Мы обратились к обьекту и вызвали метод Hello anybody
 //var_dump($object);
+
 //echo Hi::Hello(); // Обращение к методу
-//echo Hi::by();
+//echo Hi::by(); 
+// Метод - это функция находящаяся внутри класса
 
 
 
@@ -25,19 +27,21 @@ class Family {
     private $boy;
     private $girl;
 
+// Чтобы обратиться к приватным переменным, мы используем ключевое слово This
+
     public function setNameBoy($boy) {
-        $this->boy = $boy;
+        $this->boy = $boy; // Этот метот записывает
     }
     public function setNameGirl($girl) {
-        $this->girl = $girl;
+        $this->girl = $girl; // Этот метот записывает
     }
     public function getNameBoy() {
-        return $this->boy;
+        return $this->boy; // Этот метот выводит данные
     }
     public function getNameGirl() {
-        return $this->girl;
+        return $this->girl; // Этот метот выводит данные
     }
-    public function friend() {
+    public function friend() { // Этот метод автоматически использует другие 2 метода которые выше
         return $this->getNameGirl() . " и " . $this->getNameBoy() .
         " друзья!";
     }
@@ -77,7 +81,7 @@ Page::getPage();
 // -> - стрелка, которая с ключивым словом $this указывает как ссылку на методы и свойства
 // показывает на те переменные, которые созданы в классе, так же и функции
 
-/* $this-> не может получить доступ к статическому методу или статическому атребуту, 
+/* $this-> не может получить доступ к статическому методу или статическому атрибуту, 
 мы используем self для доступа к ним.
 
 $this-> при работе с расширенным классом будет ссылаться на текущую область действий,
